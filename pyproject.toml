@@ -28,6 +28,9 @@ Issues = "https://github.com/OWNER/rsna-knee-mastery/issues"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+"rsna_knee" = ["py.typed"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q --doctest-modules --doctest-glob=''"
@@ -40,3 +43,14 @@ extend-exclude = ["reference", "notebooks", "personal_notes", ".venv"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"*.ipynb" = ["E402"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+exclude = ["src/rsna_knee/fusion.py"]
+
+
+

@@ -53,3 +53,13 @@ From `W_RAPTOR_C` in `reference/notebook_pipeline.py`: Raptor weight is 0.5 by d
 PF OA 0.6, Synovitis 0.8, Baker's 0.35. The upstream notes say these were fixed by hand rather than
 fitted on a clean labelled set, so treat them as hyper-parameters of that submission, not as general
 truths.
+
+---
+
+## Related Documentation
+
+- [Dataset & Label Engineering](dataset_and_labels.md): Clinical context, DICOM properties, and weak-supervision soft labels.
+- [Frequently Asked Questions (FAQ)](faq.md): Architectural decisions, mathematical rationale, and failure isolation.
+- [API Reference](api_reference.md): Public functions and constants in `rsna_knee`.
+- [Reproduction Guide](reproduction.md): Instructions for running the complete Kaggle scored pipeline.
+

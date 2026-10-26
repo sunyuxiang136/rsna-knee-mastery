@@ -9,7 +9,25 @@ permissions:
   contents: read
 
 jobs:
+  lint:
+    name: Code Quality & Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -e ".[dev]"
+      - name: Run Ruff Lint
+        run: ruff check .
+      - name: Run Ruff Format Check
+        run: ruff format --check .
+
   test:
+    name: Tests & Coverage (Python ${{ matrix.python-version }})
+    needs: [lint]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -21,11 +39,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           cache: pip
-      - name: Install
+      - name: Install package and test dependencies
         run: pip install -e ".[dev]"
-      - name: Lint
-        run: ruff check .
-      - name: Test
+      - name: Run Unit Tests with Coverage
         run: pytest --cov=rsna_knee --cov-report=term-missing
-      - name: Run zero-GPU demo
+      - name: Run Zero-GPU Demo
         run: python examples/beginner_demo.py

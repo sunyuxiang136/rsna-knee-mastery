@@ -1,0 +1,24 @@
+# ==============================================================================
+# Pre-commit configuration for rsna-knee-mastery
+# See https://pre-commit.com for more information
+# ==============================================================================
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: ^reference/
+      - id: end-of-file-fixer
+        exclude: ^reference/
+      - id: check-yaml
+      - id: check-toml
+      - id: check-added-large-files
+        args: ["--maxkb=2500"]
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.4
+    hooks:
+      - id: ruff
+        args: ["--fix"]
+      - id: ruff-format

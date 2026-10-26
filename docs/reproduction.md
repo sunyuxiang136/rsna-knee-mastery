@@ -41,3 +41,13 @@ replacement for the model code in `reference/`.
 - No training code, no labels, and no weights are included.
 - Reported scores (public LB ≈ 0.95) come from comments in the upstream notebooks and have not been
   re-verified here; the final private-LB placement is not recorded in this repository.
+
+---
+
+## Related Documentation
+
+- [Architecture Overview](architecture.md): Visual data flow and design choices.
+- [Dataset & Label Engineering](dataset_and_labels.md): Clinical context and weak supervision details.
+- [FAQ](faq.md): Common architectural and engineering questions.
+- [API Reference](api_reference.md): Public function reference for `rsna_knee`.
+

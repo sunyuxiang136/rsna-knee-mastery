@@ -1,0 +1,26 @@
+name: Bug report
+description: Something in src/, tests/ or the docs is wrong
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: Code or commands. Do NOT paste patient data or competition data.
+      render: python
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "OS, Python version, rsna-knee version"
+    validations:
+      required: true

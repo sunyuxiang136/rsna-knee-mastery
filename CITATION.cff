@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below and credit the upstream Kaggle authors listed in THIRD_PARTY_NOTICES.md."
+title: "rsna-knee-mastery"
+type: software
+version: 0.1.0
+date-released: 2026-10-26
+license: MIT
+repository-code: "https://github.com/OWNER/rsna-knee-mastery"
+authors:
+  - name: "rsna-knee-mastery contributors"

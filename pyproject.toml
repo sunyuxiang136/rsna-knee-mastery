@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rsna-knee"
+version = "0.1.0"
+description = "Tested building blocks and annotated reference code for a public RSNA knee MRI multi-finding pipeline"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["medical-imaging", "mri", "kaggle", "multiple-instance-learning", "rank-ensemble"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = ["numpy>=1.20"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pytest-cov>=4", "ruff>=0.4"]
+full = ["torch>=2.0", "torchvision>=0.15", "timm>=0.9", "pandas>=1.5", "pydicom>=2.3", "scipy>=1.9"]
+
+[project.urls]
+Homepage = "https://github.com/OWNER/rsna-knee-mastery"
+Issues = "https://github.com/OWNER/rsna-knee-mastery/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --doctest-modules --doctest-glob=''"
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py39"
+extend-exclude = ["reference", "notebooks", "personal_notes", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

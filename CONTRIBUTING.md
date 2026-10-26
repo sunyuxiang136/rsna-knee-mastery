@@ -6,7 +6,7 @@ code for a public RSNA knee MRI pipeline.
 ## Setup
 
 ```bash
-git clone https://github.com/OWNER/rsna-knee-mastery.git
+git clone https://github.com/sunyuxiang136/rsna-knee-mastery.git
 cd rsna-knee-mastery
 python -m venv .venv && source .venv/bin/activate
 make install

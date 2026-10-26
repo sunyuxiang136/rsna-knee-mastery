@@ -1,7 +1,7 @@
 # rsna-knee-mastery
 
 <p align="center">
-  <a href="https://github.com/OWNER/rsna-knee-mastery/actions/workflows/ci.yml"><img src="https://github.com/OWNER/rsna-knee-mastery/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/sunyuxiang136/rsna-knee-mastery/actions/workflows/ci.yml"><img src="https://github.com/sunyuxiang136/rsna-knee-mastery/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
   <img src="https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-brightgreen.svg" alt="Python 3.9+">
   <img src="https://img.shields.io/badge/type%20checked-PEP%20561-informational.svg" alt="PEP 561">
@@ -42,7 +42,7 @@
 ### 1. Installation
 
 ```bash
-git clone https://github.com/OWNER/rsna-knee-mastery.git
+git clone https://github.com/sunyuxiang136/rsna-knee-mastery.git
 cd rsna-knee-mastery
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
